@@ -3,7 +3,8 @@
 #
 # Desarrollado por Mario Zamora Madriz
 #   25 de Abril 2013
-#
+# 
+#  Actualizado el 26/7/14
 
 array=( # Array de elementos a instalar.
 
@@ -12,9 +13,9 @@ remmina
 chromium-browser
 skype
 filezilla
-liferea
 putty
 zenmap
+
 # Herramientas
 guake
 pdfmod
@@ -24,27 +25,28 @@ virtualbox-4.2
 wine1.4
 cairo-dock
 apcalc
+docky
+
 # Multimedia
 inkscape
 k3b
 banshee
 vlc
 xbmc
-ubuntu-restricted-extras # SOLO PARA UBUNTU
 xfburn
+
 # Oficina
 thunderbird
-dia
+
 # Programacion
-netbeans
+# netbeans
 geany
-kompozer
-bluefish
+#bluefish
 
 ) 
 
 echo ".............Actualizando paquetes............."
-sudo apt-get update > /dev/null
+sudo apt-get update > ~/log.txt
 
 echo ".......Instalando lista de Programas Basicos..............."
 
@@ -54,5 +56,5 @@ do
    :
    # Esto es para hacerlo en interfaz grafica zenity --info --text="Instalando el paquete $i"
    echo "Instalando $i"
-   sudo apt-get -y install $i > /dev/null
+   sudo apt-get -y install $i >> ~/log.txt
 done

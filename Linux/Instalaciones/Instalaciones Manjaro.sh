@@ -2,45 +2,36 @@
 
 #
 # Desarrollado por Mario Zamora Madriz
-#   25 de Abril 2013
-#  
-# 
-#
+#   23 de Mayo 2013
+#  Actualizado el 26/7/14
 #
 
 array=( # Array de elementos a instalar.
 
+# Internet
+skype
+putty
+filezilla
+zenmap
 remmina
-netbeans
-geany
-guake
+
+# Utilidades
 pdfmod
 shutter
 openssh-server
-skype              # No esta en los repositorios de Ubuntu
 virtualbox-4.2
-chromium-browser
-inkscape
-k3b
-filezilla
-liferea
-thunderbird
-putty
-zenmap
-wine1.4
 banshee
-vlc
-dia
-cairo-dock
-xbmc
+docky
+
+# Desarrollo
+geany
+netbeans
 kompozer
-apcalc
-ubuntu-restricted-extras # SOLO PARA UBUNTU
 
 ) 
 
 echo "................................Actualizando paquetes.........................................."
-sudo apt-get update
+sudo pacman -Syyu
 
 echo "................................Instalando lista de Programas Basicos.........................................."
 
@@ -49,5 +40,5 @@ for i in "${array[@]}"
 do
    :
    echo "................................Instalando el paquete....................................................." $i
-   sudo apt-get -y install $i
+   sudo pacman -S $i
 done
