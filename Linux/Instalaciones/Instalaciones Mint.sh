@@ -10,8 +10,8 @@ array=( # Array de elementos a instalar.
 
 # Internet
 remmina
-chromium-browser
 skype
+krdc
 filezilla
 putty
 zenmap
@@ -21,7 +21,7 @@ guake
 pdfmod
 shutter
 openssh-server
-virtualbox-4.2
+virtualbox-4.3
 wine1.4
 cairo-dock
 apcalc
@@ -32,6 +32,7 @@ inkscape
 k3b
 banshee
 vlc
+minitube
 xbmc
 xfburn
 
@@ -42,6 +43,29 @@ thunderbird
 # netbeans
 geany
 #bluefish
+
+# Idiomas
+language-pack-gnome-es 
+language-pack-es 
+language-pack-kde-es 
+libreoffice-l10n-es 
+thunderbird-locale-es 
+thunderbird-locale-es-es
+
+# Utilidades
+ttf-mscorefonts-installer
+gparted
+furiusisomount
+
+# Herramientas de Descompresion
+unace 
+unrar 
+zip 
+unzip 
+p7zip-full 
+p7zip-rar 
+sharutils 
+rar
 
 ) 
 
@@ -58,3 +82,13 @@ do
    echo "Instalando $i"
    sudo apt-get -y install $i >> ~/log.txt
 done
+
+echo "Instalando Screnfetch"
+cd /usr/bin
+sudo wget -c https://raw.github.com/KittyKatt/screenFetch/master/screenfetch-dev -O screenfetch
+sudo chmod +x screenfetch
+
+sudo apt-get autoremove
+sudo apt-get autoclean
+
+
