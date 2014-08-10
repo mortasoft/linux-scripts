@@ -1,0 +1,5 @@
+Ingresar a:
+
+chrome://flags/#enable-app-list
+
+Habilitar el menu de aplicaciones
