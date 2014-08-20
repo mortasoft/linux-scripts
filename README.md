@@ -19,5 +19,11 @@ git config --global user.name "Nombre"
 
 
 ```
+## Uso
 
+Para actualizar el repositorio utilizar el comando:
 
+```
+git pull origin master
+
+```
