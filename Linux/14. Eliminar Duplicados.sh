@@ -1,0 +1,3 @@
+
+fdupes /home/usuario
+
