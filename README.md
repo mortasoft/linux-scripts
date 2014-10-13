@@ -25,5 +25,7 @@ Para actualizar el repositorio utilizar el comando:
 
 ```
 git pull origin master
+git config --global credential.helper 'cache --timeout=3600'
+## Esto para que guarde las credenciales
 
 ```
