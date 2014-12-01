@@ -10,7 +10,6 @@ array=( # Array de elementos a instalar.
 
 # Internet
 remmina
-skype
 krdc
 filezilla
 putty
@@ -21,19 +20,14 @@ guake
 pdfmod
 shutter
 openssh-server
-virtualbox-4.3
-wine1.4
-cairo-dock
 apcalc
 docky
 
 # Multimedia
 inkscape
-k3b
 banshee
 vlc
 minitube
-xbmc
 xfburn
 
 # Oficina
