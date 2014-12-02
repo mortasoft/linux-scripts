@@ -47,7 +47,7 @@ thunderbird-locale-es
 thunderbird-locale-es-es
 
 # Utilidades
-ttf-mscorefonts-installer
+# ttf-mscorefonts-installer
 gparted
 furiusisomount
 
