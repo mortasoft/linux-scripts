@@ -22,12 +22,13 @@ git push origin master
 
 Para agregar la clave SSH
 
-ssh-keygen -t rsa -C "your_email@example.com"
+ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
 eval "$(ssh-agent -s)"
 ssh-add ~/.ssh/id_rsa
 
 Luego agregar el contenido de ~/.ssh/id_rsa.pub al menu de Github en configuraciones
-
+## Prueba la conexión
+ssh -T git@github.com
 ```
 ## Uso
 
