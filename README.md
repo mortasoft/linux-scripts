@@ -39,4 +39,9 @@ git config --global credential.helper 'cache --timeout=3600'
 ## Esto para que guarde las credenciales
 git config remote.origin.url git@github.com:mortasoft/scripts.git
 
+# Realiza el commit de los cambios
+git commit -a 
+# Sube los cambios a Github
+git push origin master
+
 ```
