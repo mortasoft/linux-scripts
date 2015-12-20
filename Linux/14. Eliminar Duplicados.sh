@@ -1,3 +1,9 @@
+# Este comando encuentra y elimina archivos repetidos
+# sudo apt-get install fdupes
 
-fdupes /home/usuario
+# Muestra los archivos duplicados
+fdupes -r /home/usuario
+
+# Elimina los archivos
+fdupes -d /home/$USER/Desktop/tecmint
 
