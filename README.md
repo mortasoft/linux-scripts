@@ -45,3 +45,6 @@ git commit -a
 git push origin master
 
 ```
+## Nota
+
+Si no accesa por ssh eliminar los archivos y generarlos de nuevo
