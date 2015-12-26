@@ -3,22 +3,27 @@ scripts
 
 Scripts Útiles para el uso personal 
 
-## Instrucciones de Instalación
+## Instrucciones de Instalación en Linux
 
-```
 Posicionarse en la carpeta que quiere utilizar para el repositorio
+```sh
+
 git init
 git remote add origin https://github.com/mortasoft/scripts.git
 git pull origin master
+```
 
 Para hacer commits:
 
+```sh
 git config --global user.email "correo@dominio.com"
 git config --global user.name "Nombre"
 
 git commit -a
 git push origin master
+```
 
+```sh
 Para agregar la clave SSH
 
 ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
