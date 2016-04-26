@@ -1,0 +1,14 @@
+# http://blog.desdelinux.net/10-trucos-del-terminal/
+# Comandos mas usados
+history | awk '{a[$2]++}END{for(i in a){print a[i] " " i}}' | sort -rn | head
+
+# Limpiar la consola
+Ctrl +L
+
+# Cortar y pegar en la terminal
+Ctrl + U   Ctrl + Y
+#
+
+#
+
+#
