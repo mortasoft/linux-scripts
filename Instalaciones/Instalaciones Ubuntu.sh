@@ -4,18 +4,27 @@
 # Desarrollado por Mario Zamora Madriz
 #   25 de Abril 2013
 #
+# 1.4 25/05/16 Agregados algunas cosas
+#
+#
+#
+#
+#
+
+#
+# Agregando repositorios adicionales
+#
+sudo add-apt-repository ppa:numix/ppa -y
 
 array=( # Array de elementos a instalar.
 
 # Programacion
 netbeans
 geany
-kompozer
 # Internet
 remmina
 chromium-browser
 filezilla
-liferea
 putty
 zenmap
 # Herramientas
@@ -23,22 +32,22 @@ guake
 pdfmod
 shutter
 openssh-server
-virtualbox-4.2
-wine1.4
+virtualbox
+wine
 cairo-dock
 apcalc
 # Multimedia
 inkscape
-k3b
 banshee
 vlc
-xbmc
 ubuntu-restricted-extras # SOLO PARA UBUNTU
 xfburn
 # Oficina
 thunderbird
 dia
-
+# Numix Icons
+numix-gtk-theme
+numix-icon-theme-circle
 ) 
 
 echo "................................Actualizando paquetes.........................................."
