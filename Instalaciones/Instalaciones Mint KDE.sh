@@ -18,7 +18,7 @@ zenmap
 youtube-dl
 
 # Herramientas
-guake
+yakuake
 shutter
 openssh-server
 apcalc
@@ -26,10 +26,8 @@ docky
 
 # Multimedia
 inkscape
-banshee
 vlc
 minitube
-xfburn
 
 # Oficina
 thunderbird
@@ -40,8 +38,6 @@ geany
 #bluefish
 
 # Idiomas
-language-pack-gnome-es 
-language-pack-es 
 language-pack-kde-es 
 libreoffice-l10n-es 
 thunderbird-locale-es 

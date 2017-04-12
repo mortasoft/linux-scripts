@@ -5,28 +5,25 @@
 #   23 de Mayo 2013
 #  Actualizado el 26/7/14
 #
+#  Actualizado 17/09/2016 
+#
 
 array=( # Array de elementos a instalar.
 
 # Internet
-skype
-putty
 filezilla
 zenmap
 remmina
 
 # Utilidades
-pdfmod
 shutter
 openssh-server
-virtualbox-4.2
 banshee
 docky
 
 # Desarrollo
 geany
 netbeans
-kompozer
 
 ) 
 
