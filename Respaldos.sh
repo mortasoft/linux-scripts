@@ -1,5 +1,5 @@
 #!/bin/bash
-# 
+# Realizar respaldos con Rsync
 
 ORIGEN=/home/user/Documents/
 DESTINO=/media/diskid/user_backup/Documents/
@@ -13,6 +13,4 @@ rsync -avz carpetalocal/ $REMOTO
 
 # Copiar desde un servidor remoto a una carpeta local
 rsync -avz $REMOTO carpetalocal/ 
-#
-
 

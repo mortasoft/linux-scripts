@@ -1,8 +1,9 @@
-#echo -e "Escribe un numero por favor: "
-# read numero
-#tope=$numero
-numero=$1
+#!/bin/bash
+echo -e "Escribe un numero por favor: "
+ read numero
 tope=$numero
+#numero=$1
+#tope=$numero
 clear
 for (( numero; numero>=0; numero-- ))
 do

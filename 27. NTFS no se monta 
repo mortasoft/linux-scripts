@@ -1,3 +1,0 @@
-sudo ntfsfix /dev/sdXY
-
-# Ejemplo sudo ntfsfix /dev/sde1

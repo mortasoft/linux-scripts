@@ -6,7 +6,10 @@
 # 
 #  Actualizado el 26/7/14
 
+# Numix Circle Icons
 sudo add-apt-repository ppa:numix/ppa -y
+# Java
+sudo add-apt-repository ppa:webupd8team/java
 
 array=( # Array de elementos a instalar.
 
@@ -23,6 +26,7 @@ shutter
 openssh-server
 apcalc
 docky
+oracle-java8-installer
 
 # Multimedia
 inkscape
@@ -32,10 +36,10 @@ minitube
 xfburn
 
 # Oficina
-thunderbird
+#thunderbird
 
 # Programacion
-# netbeans
+netbeans
 geany
 #bluefish
 
@@ -44,8 +48,6 @@ language-pack-gnome-es
 language-pack-es 
 language-pack-kde-es 
 libreoffice-l10n-es 
-thunderbird-locale-es 
-thunderbird-locale-es-es
 
 # Utilidades
 # ttf-mscorefonts-installer
