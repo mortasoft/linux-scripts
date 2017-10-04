@@ -1,0 +1,5 @@
+#!/bin/bash
+#
+# Descomprime archivos rar en batch
+# unrar/unzip/join all files in directory
+for f in *.rar;do unrar -p<$1> e $f;done
