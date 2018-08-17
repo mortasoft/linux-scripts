@@ -11,14 +11,25 @@ sudo add-apt-repository ppa:numix/ppa -y
 # Java
 sudo add-apt-repository ppa:webupd8team/java
 
+# Sublime Text
+wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
+echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list
+
 array=( # Array de elementos a instalar.
 
 # Internet
 remmina
 filezilla
 putty
-zenmap
 youtube-dl
+
+# Seguridad
+zenmap
+wireshark
+etherape
+denyhosts
+clamav
+hping3
 
 # Herramientas
 guake
@@ -27,19 +38,24 @@ openssh-server
 apcalc
 docky
 oracle-java8-installer
+grsync
+testdisk
 
 # Multimedia
 inkscape
 banshee
 vlc
 minitube
-xfburn
+# xfburn Obsoleto
 
 # Oficina
-#thunderbird
+#thunderbird Obsoleto
 
-# Programacion
+# Desarrollo
 netbeans
+# Sublime Text
+apt-transport-https
+sublime-text
 geany
 #bluefish
 
@@ -53,6 +69,10 @@ libreoffice-l10n-es
 # ttf-mscorefonts-installer
 gparted
 furiusisomount
+virtualbox
+virtualbox-guest-additions-iso
+virtualbox-ext-pack
+virtualbox-qt
 
 # Herramientas de Descompresion
 unace 
@@ -66,7 +86,6 @@ rar
 # Numix Icons
 numix-gtk-theme
 numix-icon-theme-circle
-
 ) 
 
 echo ".............Actualizando paquetes............."
@@ -90,5 +109,3 @@ sudo chmod +x screenfetch
 
 sudo apt-get autoremove
 sudo apt-get autoclean
-
-
