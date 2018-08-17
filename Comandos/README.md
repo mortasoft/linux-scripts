@@ -1,52 +1,15 @@
-# [Scripts](http://www.mortasoft.com)
-=======
+# [Comandos Útiles](http://www.mortasoft.com)
 
 Scripts Útiles para el uso personal 
 
-## Instrucciones de Instalación en Linux
+## Lista los discos duros y sus particiones
 
-Posicionarse en la carpeta que quiere utilizar para el repositorio
 ```sh
-git init
-git remote add origin https://github.com/mortasoft/scripts.git
-git pull origin master
+lsblk
 ```
 
-Para agregar la clave SSH
+## Grabar la pantalla desde la terminal
+sudo apt-get install libav-tools
 ```sh
-ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
-eval "$(ssh-agent -s)"
-ssh-add ~/.ssh/id_rsa
-
-Luego agregar el contenido de ~/.ssh/id_rsa.pub al menu de Github en configuraciones
-## Este comando prueba la conexión
-ssh -T git@github.com
+avconv -f x11grab -s 1024x768 -r 25 -i :0.0 -qscale 0 screen.mp4
 ```
-
-Para hacer commits:
-```sh
-git config --global user.email "correo@dominio.com"
-git config --global user.name "Nombre"
-
-git commit -a
-git push origin master
-```
-
-## Uso
-
-Para actualizar el repositorio utilizar el comando:
-```sh
-git pull origin master
-git config --global credential.helper 'cache --timeout=3600'
-## Esto para que guarde las credenciales
-git config remote.origin.url git@github.com:mortasoft/scripts.git
-
-# Realiza el commit de los cambios
-git commit -a 
-# Sube los cambios a Github
-git push origin master
-
-```
-## Nota
-
-Si no accesa por ssh eliminar los archivos y generarlos de nuevo
