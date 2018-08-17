@@ -7,14 +7,12 @@ Scripts Útiles para el uso personal
 
 Posicionarse en la carpeta que quiere utilizar para el repositorio
 ```sh
-
 git init
 git remote add origin https://github.com/mortasoft/scripts.git
 git pull origin master
 ```
 
 Para agregar la clave SSH
-
 ```sh
 ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
 eval "$(ssh-agent -s)"
@@ -26,7 +24,6 @@ ssh -T git@github.com
 ```
 
 Para hacer commits:
-
 ```sh
 git config --global user.email "correo@dominio.com"
 git config --global user.name "Nombre"
@@ -38,8 +35,7 @@ git push origin master
 ## Uso
 
 Para actualizar el repositorio utilizar el comando:
-
-```
+```sh
 git pull origin master
 git config --global credential.helper 'cache --timeout=3600'
 ## Esto para que guarde las credenciales
