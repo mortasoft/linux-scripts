@@ -1,0 +1,12 @@
+sudo apt install postfix
+# se tiene que configurar como internet site
+./SimpleEmailSpoofer.py 
+./SimpleEmailSpoofer.py -e archivo.html -t mario.andres.zamora@cgr.go.cr -f morta@gg.com -n Mario -j Basura
+./SimpleEmailSpoofer.py -e archivo.html -t mortasoft@gmail.com -f morta@gg.com -n Mario -j Basura
+./SimpleEmailSpoofer.py -e archivo.html -t tavizzle@gmail.com -f gustavo@desert.com -n Gustavo -j TestMail
+./SimpleEmailSpoofer.py -e archivo.html -t mortasoft@gmail.com -f gustavo@desert.com -n Gustavo -j TestMail
+./SimpleEmailSpoofer.py -e archivo.html -t mortasoft@yopmail.com -f gustavo@desert.com -n Gustavo -j TestMail
+./SimpleEmailSpoofer.py -e archivo.html -t mortasoft@gmail.com -f gustavo@de -n Gustavo -j TestMail
+./SimpleEmailSpoofer.py -e archivo.html -t tavizzle@gmail.com -f gustavo@desertdevco.com -n Gustavo -j TestMail
+./SimpleEmailSpoofer.py -e archivo.html -t mortasoft@gmail.com -f gustavo@desertdevco.com -n Gustavo -j TestMail
+

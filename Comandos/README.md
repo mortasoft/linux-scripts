@@ -169,3 +169,56 @@ wget -q -O - https://raw.githubusercontent.com/mortasoft/scripts/master/13.%20Cr
 sudo apt-get install ocrfeeder tesseract-ocr tesseract-ocr-spa tesseract-ocr-eng gocr cuneiform ocropusocrad
 ocrfeeder
 ```
+
+## Buscar texto
+
+```sh
+# mydomain.com 
+grep -r "mydomain.com" /etc/apache2/
+```
+
+## Reiniciar Cinnamon
+
+```sh
+killall -HUP cinnamon-session
+```
+
+## Respaldo Rsync
+
+```sh
+#Respaldo RSYNC
+rsync -r -t -v --progress -s mortasoft@koala:/datos/Soporte /home/mortasoft/Koala
+```
+
+## Flush Rules
+
+```sh
+iptables -F
+iptables -X
+iptables -Z
+iptables -t nat -F
+```
+
+## Listar Archivos de una carpeta a un archivo
+
+```sh
+for f in *;do echo $f>>archivo.txt;done
+```
+
+## Docker
+
+```sh
+sudo usermod -aG docker $(whoami)
+docker pull ubuntu
+docker run ubuntu
+#Da un shell interactivo
+docker run -it ubuntu
+# docker commit -m "Primera Imagen" -a "mortasoft" 7100a984f6f7 mortasoft/ubuntu1
+# docker stop container-id
+```
+
+## Ataque DDOS
+
+```sh
+sudo hping3 192.232.217.2 --flood -V
+```

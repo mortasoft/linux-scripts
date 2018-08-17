@@ -10,6 +10,8 @@
 sudo add-apt-repository ppa:numix/ppa -y
 # Java
 sudo add-apt-repository ppa:webupd8team/java
+sudo add-apt-repository ppa:mystic-mirage/pycharm -y # PyCharm Entorno Python
+sudo add-apt-repository ppa:libreoffice/ppa -y # LibreOffice Stable
 
 # Sublime Text
 wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
@@ -30,6 +32,7 @@ etherape
 denyhosts
 clamav
 hping3
+hexchat
 
 # Herramientas
 guake
@@ -40,16 +43,22 @@ docky
 oracle-java8-installer
 grsync
 testdisk
+screen
+cryptsetup
+vokoscreen
 
 # Multimedia
 inkscape
 banshee
 vlc
 minitube
+mixxx
+ffmpeg
 # xfburn Obsoleto
 
 # Oficina
 #thunderbird Obsoleto
+calibre
 
 # Desarrollo
 netbeans
@@ -57,6 +66,9 @@ netbeans
 apt-transport-https
 sublime-text
 geany
+glade
+meld
+pycharm-community
 #bluefish
 
 # Idiomas

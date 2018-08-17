@@ -130,3 +130,35 @@ tiff2pdf -o salida.pdf archivo.TIF
 ffmpeg -t 5 -ss 00:00:10 -i VIDEO SALIDA.gif
 # Convertir de MKV a MP4
 ffmpeg -i input.mkv -codec copy output.mp4
+
+
+#Reiniciar Cinamon
+killall -HUP cinnamon-session
+
+
+#Respaldo RSYNC
+rsync -r -t -v --progress -s mortasoft@koala:/datos/Soporte /home/mortasoft/Koala
+
+# Flush 
+iptables -F
+iptables -X
+iptables -Z
+iptables -t nat -F
+
+# Docker
+sudo usermod -aG docker $(whoami)
+docker pull ubuntu
+docker run ubuntu
+#Da un shell interactivo
+docker run -it ubuntu
+# docker commit -m "Primera Imagen" -a "mortasoft" 7100a984f6f7 mortasoft/ubuntu1
+# docker stop container-id
+
+#Listar archivos
+for f in *;do echo $f>>archivo.txt;done
+
+# Encriptar
+gpg -o archivoEncriptado.gpg --symmetric --cipher-algo AES256 archivo.txt
+
+# Desencriptar
+gpg -o archivo.txt -d archivoEncriptado.gpg
