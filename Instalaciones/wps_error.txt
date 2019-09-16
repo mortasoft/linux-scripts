@@ -1,0 +1,4 @@
+# Error
+# Some formula symbols might not be displayed correctly due to missing fonts Symbol, Wingdings, Wingdings 2, Wingdings 3, Webdings, MT Extra.
+unzip wps_symbol_fonts.zip -d ~/.fonts
+sudo fc-cache -f -v
