@@ -8,6 +8,13 @@
 
 # Numix Circle Icons
 sudo add-apt-repository ppa:numix/ppa -y
+
+# Papirus
+sudo add-apt-repository ppa:papirus/papirus -y
+
+# Moka / Paper Icons
+sudo add-apt-repository ppa:snwh/ppa -y
+
 # Java
 sudo add-apt-repository ppa:webupd8team/java
 sudo add-apt-repository ppa:mystic-mirage/pycharm -y # PyCharm Entorno Python
@@ -98,6 +105,11 @@ rar
 # Numix Icons
 numix-gtk-theme
 numix-icon-theme-circle
+papirus-icon-theme
+paper-icon-theme
+moka-icon-theme
+
+
 ) 
 
 echo ".............Actualizando paquetes............."
