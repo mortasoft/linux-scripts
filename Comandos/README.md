@@ -146,6 +146,19 @@ pdfunite ejemplo2.pdf ejemplo3.pdf ejemplo4.pdf ejemplo5.pdf resultado.pdf
 pdfseparate -f 2 -l 32 documento.pdf resultado_%d.pdf
 ```
 
+## Convertir PDF a JPG
+
+```sh
+convert -verbose -density 300 -trim -quality 100 -flatten -sharpen 0x1.0 archivo.pdf salida.jpg
+## Script para hacerlo masivo
+
+#/bin/bash
+for file in *.pdf;do 
+	convert -verbose -density 300 -trim -quality 100 -flatten -sharpen 0x1.0 $file $file.jpg
+done
+
+```
+
 ## Crear archivo aleatorio
 
 ```sh
