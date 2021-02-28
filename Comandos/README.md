@@ -85,11 +85,11 @@ ffmpeg -t 5 -ss 00:00:10 -i VIDEO SALIDA.gif
 ffmpeg -i input.mkv -codec copy output.mp4
 ```
 
-## Crear ventanas
+## Dividir un video en un intervalo determinado
 
 ```sh
-zenity --error --text="Este es un mensaje de error"
-zenity --info --text "Mensaje informativo"
+ffmpeg -i archivo.mp4 -s 0 -t 600 first-10-min.mp4
+
 ```
 
 ## Muestra los archivos duplicados
