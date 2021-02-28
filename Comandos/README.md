@@ -235,3 +235,11 @@ docker run -it ubuntu
 ```sh
 sudo hping3 192.232.217.2 --flood -V
 ```
+
+
+## Importar certificado OpenVPN en Kubuntu
+
+```sh
+sudo nmcli connection import type openvpn file Zenbook.ovpn
+```
+
