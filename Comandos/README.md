@@ -69,7 +69,7 @@ sudo wondershaper eth0 1024 512
 # El ejemplo anterior limita la conexión a 1024kbps de bajada y 512kbps de subida
 ```
 
-## Convertir de .flv a .avi (XViD)
+## Convertir video de .flv a .avi (XViD)
 
 ```sh
 
@@ -84,6 +84,7 @@ ffmpeg -t 5 -ss 00:00:10 -i VIDEO SALIDA.gif
 # Convertir de MKV a MP4
 ffmpeg -i input.mkv -codec copy output.mp4
 ```
+### Convertir de TIFF a PDF
 
 ## Dividir un video en un intervalo determinado
 
