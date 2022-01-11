@@ -1,5 +1,0 @@
-# Fix problem with Uploading files to Google Drive in Google Chrome and Firefox
-# Due a problem with the Mime types Application/PDF
-cd /usr/share/mime/packages/
-sudo rm wps-office-pdf.xml 
-sudo update-mime-database /usr/share/mime/
