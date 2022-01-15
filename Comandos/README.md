@@ -2,6 +2,17 @@
 
 Scripts Útiles para el uso personal 
 
+## Resetear el password de Root 
+- 1: Reiniciar el equipo
+- 2: Abrir el GRUB y seleccionar "Opciones Avanzadas" 
+- 3: Presionar 'e' 
+- 4: Buscar la linea que inicia con 'ro' y cambielo a 'rw'
+- 5: Agregue ``` init=/bin/bash ``` al final de la linea
+- 6: Presione ```F10```
+- 7: Monte su sistema de archivos con el comando ```mount -n -o remount,rw /```
+- 8: Resetea la contraseña con ```passwd root```
+- 9: Digite ```exec /sbin/init``` para salir 
+
 ## Lista los discos duros y sus particiones
 
 ```sh
