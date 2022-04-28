@@ -259,3 +259,11 @@ sudo hping3 192.232.217.2 --flood -V
 sudo nmcli connection import type openvpn file Zenbook.ovpn
 ```
 
+## Instalar Megasync en Kali Linux
+```sh
+wget --inet4-only -O- https://mega.nz/linux/repo/Debian_testing/Release.key | gpg --dearmor | sudo tee /usr/share/keyrings/megasync-archive-keyring.gpg
+echo "deb [arch=amd64 signed-by=/usr/share/keyrings/megasync-archive-keyring.gpg] https://mega.nz/linux/repo/Debian_testing ./" | sudo tee /etc/apt/sources.list.d/megasync.list
+sudo apt update && sudo apt -y full-upgrade && sudo apt autoremove
+sudo apt install megasync
+sudo apt install nautilus-megasync
+```
