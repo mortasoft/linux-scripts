@@ -267,3 +267,22 @@ sudo apt update && sudo apt -y full-upgrade && sudo apt autoremove
 sudo apt install megasync
 sudo apt install nautilus-megasync
 ```
+
+## Kali Linux Multiple Eth Adapters
+```sh
+sudo nano /etc/network/interfaces:
+```
+
+# This file describes the network interfaces available on your system
+# and how to activate them. For more information, see interfaces(5).
+
+# The loopback network interface
+auto lo
+iface lo inet loopback
+
+# The primary network interface
+allow-hotplug eth0
+iface eth0 inet dhcp
+
+allow-hotplug eth1
+iface eth1 inet dhcp
