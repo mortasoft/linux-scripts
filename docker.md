@@ -1,5 +1,4 @@
 # Install Docker on Ubuntu 20.04
-[I'm an inline-style link](https://www.google.com)
 
 ## 1. Update packages
 ```
@@ -57,7 +56,11 @@ docker search ubuntu
 
 ### Installed images
 ```
+# Show installed images
 sudo docker images
+
+# Delete images with no tags
+docker image prune --filter="dangling=true"
 ```
 
 ## Container Stats
@@ -79,7 +82,6 @@ docker run --rm image_name
 
 # Delete all containers with "Closed" state
 sudo docker rm $(sudo docker ps -a -f status=exited -q)
-
 ```
 ### Stop and start containers
 ```
@@ -96,7 +98,6 @@ sudo docker login -u dockerhub_user
 sudo docker commit b7dc036f2c99
 
 ```
-
 
 # Specific container configurations
 
@@ -127,3 +128,45 @@ docker cp CAF_CGR_SEP19 sql1:/var/opt/mssql/backup
 # Run the container
 docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P '123456..' -Q 'RESTORE DATABASE CAF FROM DISK="/var/opt/mssql/backup/CAF_CGR_SEP19" WITH MOVE "CAF" TO "/var/opt/mssql/data/CAF.MDF", MOVE "CAF_log" TO "/var/opt/mssql/data/CAF_log.ldf"'  
 ```
+
+## Install MySQL Server
+```
+# Download image
+docker pull mysql:latest
+
+# Create a directory to store MySql Configuration
+sudo mkdir -p /root/docker/mysql/conf.d
+sudo touch /root/docker/mysql/conf.d/my-custom.cnf
+
+# Create MySQL Data Volume
+sudo mkdir -p /root/docker/mysql/my-data
+
+# Run container
+docker run \
+--detach \
+--name=mysql01 \
+--env="MYSQL_ROOT_PASSWORD=password" \
+--publish 6603:3306 \
+--volume=/root/docker/mysql01/conf.d:/etc/mysql/conf.d \
+--volume=/root/docker/mysql01/my-data:/var/lib/mysql \
+mysql:latest
+
+
+# SQL console access from host
+mysql -uroot -pmypassword -h127.0.0.1 -P6603;
+```
+
+
+
+### Configuration for Dbeaver
+* Right click your connection, choose "Edit Connection"
+
+* On the "Connection settings" screen (main screen) click on "Edit Driver Settings"
+
+* Click on "Connection properties", (In recent versions it named "Driver properties")
+
+* Right click the "user properties" area and choose "Add new property"
+
+* Add two properties: "useSSL" and "allowPublicKeyRetrieval"
+
+* Set their values to "false" and "true" by double clicking on the "value" column
