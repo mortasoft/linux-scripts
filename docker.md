@@ -197,6 +197,7 @@ docker run \
 -it \
 --name=kali-con \
 --publish 9392:9392 \
+--publish 8080:8080 \
 --volume=/root/docker/kali-con:/data \
 kalilinux/kali-rolling:latest
 
