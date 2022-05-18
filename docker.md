@@ -36,6 +36,25 @@ su - ${USER}
 sudo docker run hello-world
 ```
 
+# Install Docker on Kali Linux
+## 1. Add the repository
+
+```
+printf '%s\n' "deb https://download.docker.com/linux/debian bullseye stable" |
+  sudo tee /etc/apt/sources.list.d/docker-ce.list
+```
+
+## 2. Import the GPG Key
+```
+curl -fsSL https://download.docker.com/linux/debian/gpg |
+  sudo gpg --dearmor -o /etc/apt/trusted.gpg.d/docker-ce-archive-keyring.gpg
+```
+
+## 3. Install Docker
+```
+sudo apt update
+sudo apt install -y docker-ce docker-ce-cli containerd.io
+```
 
 ---
 
@@ -170,3 +189,26 @@ mysql -uroot -pmypassword -h127.0.0.1 -P6603;
 * Add two properties: "useSSL" and "allowPublicKeyRetrieval"
 
 * Set their values to "false" and "true" by double clicking on the "value" column
+
+# Install Kali Linux
+```
+# Run the container
+docker run \
+-it \
+--name=kali-con \
+--publish 9392:9392 \
+--volume=/root/docker/kali-con:/data \
+kalilinux/kali-rolling:latest
+
+# Inside the container run the next commands
+apt update
+apt dist-upgrade
+apt autoremove
+apt clean
+apt install kali-tools-top10 man-db exploitdb
+exit
+
+# In the host make a commit of the KaliContainer
+docker commit kali-con my-kali
+```
+```
