@@ -204,6 +204,9 @@ ocrfeeder
 ```sh
 # mydomain.com 
 grep -r "mydomain.com" /etc/apache2/
+
+# Buscar archivo y quitar los mensajes de error
+find / -name foo 2>/dev/null
 ```
 
 ## Reiniciar Cinnamon
