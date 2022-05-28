@@ -281,7 +281,7 @@ sudo apt install nautilus-megasync
 ```sh
 sudo nano /etc/network/interfaces:
 ```
-
+```sh
 # This file describes the network interfaces available on your system
 # and how to activate them. For more information, see interfaces(5).
 
@@ -295,3 +295,4 @@ iface eth0 inet dhcp
 
 allow-hotplug eth1
 iface eth1 inet dhcp
+```
