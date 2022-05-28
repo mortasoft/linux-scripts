@@ -255,6 +255,12 @@ docker run -it ubuntu
 sudo hping3 192.232.217.2 --flood -V
 ```
 
+## Disable Cups Service
+
+```sh
+sudo systemctl disable cups.service
+```
+
 
 ## Importar certificado OpenVPN en Kubuntu
 
