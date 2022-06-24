@@ -1,0 +1,21 @@
+# Error
+# Some formula symbols might not be displayed correctly due to missing fonts Symbol, Wingdings, Wingdings 2, Wingdings 3, Webdings, MT Extra.
+unzip wps_symbol_fonts.zip -d ~/.fonts
+sudo fc-cache -f -v
+
+# Fix problem with Uploading files to Google Drive in Google Chrome and Firefox
+# Due a problem with the Mime types Application/PDF
+cd /usr/share/mime/packages/
+sudo rm wps-office-pdf.xml 
+sudo update-mime-database /usr/share/mime/
+
+
+#/bin/bash
+#
+# Script para solucionar problema con WPS en Manjaro
+#
+cd /usr/share/mime/packages/
+sudo rm wps-office-et.xml 
+sudo rm wps-office-wpp.xml
+sudo rm wps-office-wps.xml
+sudo update-mime-database /usr/share/mime
