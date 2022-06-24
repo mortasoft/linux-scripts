@@ -1,5 +1,9 @@
 # Cómo crear un sitio en Tor Hidden Services
 
+## Requisitos
+
+Ubuntu 20.04
+
 ## 1. Abrir la terminal y loguearse como Root
 ```bash
 sudo su -
