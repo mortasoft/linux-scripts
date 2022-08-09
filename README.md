@@ -53,3 +53,6 @@ git push origin master
 ## Nota
 
 Si no accesa por ssh eliminar los archivos y generarlos de nuevo
+
+Para arreglar si clonamos mediante HTTPS y no mediante SSH
+git remote set-url origin git@github.com:mortasoft/linux-scripts.git
