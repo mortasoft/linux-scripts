@@ -1,0 +1,41 @@
+version: '2'
+services:
+  mariadb:
+    image: docker.io/bitnami/mariadb:10.6
+    container_name: mariadb_jasper_test
+    restart: always
+    volumes:
+      - 'mariadb_data:/bitnami/mariadb'
+    environment:
+      - MARIADB_USER=jasper
+      - MARIADB_PASSWORD=PASSWORD
+      - MARIADB_DATABASE=cgr_jasper_reports
+      - MARIADB_ROOT_PASSWORD=PASSWORD
+      - BITNAMI_DEBUG=true
+  jasperreports:
+    # El driver de Oracle se baja de: https://download.oracle.com/otn-pub/otn_software/jdbc/215/ojdbc8.jar
+    image: docker.io/bitnami/jasperreports:8
+    container_name: jasperserver_test
+    restart: always
+    ports:
+      - '8280:8080'
+    volumes:
+      - 'jasperreports_data:/bitnami/jasperreports'
+    depends_on:
+      - mariadb
+    environment:
+      - JASPERREPORTS_USERNAME=jasperadmin
+      - JASPERREPORTS_PASSWORD=PASSWORD
+      - JASPERREPORTS_EMAIL=correo@gmail.com
+      - JASPERREPORTS_SKIP_BOOTSTRAP=no # Poner yes , si la base de datos ya tiene datos
+      - JASPERREPORTS_DATABASE_HOST=mariadb
+      - JASPERREPORTS_DATABASE_TYPE=mariadb
+      - JASPERREPORTS_DATABASE_PORT_NUMBER=3306
+      - JASPERREPORTS_DATABASE_USER=jasper
+      - JASPERREPORTS_DATABASE_PASSWORD=PASSWORD
+      - JASPERREPORTS_DATABASE_NAME=cgr_jasper_reports
+volumes:
+  mariadb_data:
+    driver: local
+  jasperreports_data:
+    driver: local

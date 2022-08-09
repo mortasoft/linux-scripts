@@ -1,0 +1,10 @@
+version: '3'
+services:
+  app:
+    image: 'nginx'
+    restart: unless-stopped
+    ports:
+      - '9091:80'
+    volumes:
+      - /var/www/mortasoft.xyz:/var/www/mortasoft.xyz
+      - /etc/letsencrypt:/etc/letsencrypt
