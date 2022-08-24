@@ -1,0 +1,20 @@
+--- dvwa-nginx.conf.bak	2022-08-24 01:37:26.843735928 -0500
++++ dvwa-nginx.conf	2022-08-24 01:38:18.773686348 -0500
+@@ -6,15 +6,11 @@
+         #server_name localhost;
+  
+         location / {
+-	    allow 127.0.0.1;
+-	    deny all;
+-            try_files $uri $uri/ =404;
++	    try_files $uri $uri/ =404;
+         }
+  
+         location ~ \.php$ {
+-	    allow 127.0.0.1;
+-	    deny all;
+-#            try_files $uri $uri/ =404;
++	    #            try_files $uri $uri/ =404;
+             include snippets/fastcgi-php.conf;
+             fastcgi_pass unix:/var/run/php/php8-fpm-42001.sock;
+         }
