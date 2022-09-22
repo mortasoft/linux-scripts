@@ -56,3 +56,22 @@ Si no accesa por ssh eliminar los archivos y generarlos de nuevo
 
 Para arreglar si clonamos mediante HTTPS y no mediante SSH
 git remote set-url origin git@github.com:mortasoft/linux-scripts.git
+
+# EC2
+Para conectarse a instancias EC2 sin poner credenciales realizar lo siguiente
+
+```
+nano ~/.ssh/config
+```
+
+```
+Host ec2
+  Hostname ec2-35-169-93-188.compute-1.amazonaws.com
+  user ubuntu
+  IdentityFile ~/.ssh/my-aws-key.pem
+  Port 22
+```
+
+```
+ssh ec2
+```
