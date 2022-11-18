@@ -19,3 +19,6 @@ sudo systemctl restart postgresql.service
 sudo gvm-check-setup
 sudo runuser -u postgres -- /usr/share/gvm/create-postgresql-database
 ```
+
+## Change Password
+sudo runuser -u _gvm -- gvmd --create-user=admin --password=password
