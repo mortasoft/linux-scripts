@@ -298,4 +298,11 @@ iface eth1 inet dhcp
 ```
 
 ## Actualizar repositorios en Manjaro
+```
 sudo pacman-mirrors --fasttrack && sudo pacman -Syuu
+```
+
+## Comando para tomar screenshots CEH
+```
+flameshot screen -n 1 -c --region 1367x765+80+50
+```
