@@ -306,3 +306,14 @@ sudo pacman-mirrors --fasttrack && sudo pacman -Syuu
 ```
 flameshot screen -n 1 -c --region 1367x765+80+50
 ```
+
+## Comando para instlar Webmin
+echo "deb http://download.webmin.com/download/repository sarge contrib" | sudo tee /etc/apt/sources.list.d/webmin.list
+cd ~/
+wget http://www.webmin.com/jcameron-key.asc
+sudo apt-key add jcameron-key.asc
+rm jcameron-key.asc
+sudo apt-get update
+sudo apt-get install libapt-pkg-perl libnet-ssleay-perl libauthen-pam-perl libio-pty-perl apt-show-versions
+sudo apt-get install webmin
+sudo reboot
