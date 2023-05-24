@@ -1,0 +1,39 @@
+#!/usr/bin/env python3
+from io import open
+import os
+
+nombre_archivo = input("Nombre el archivo .desktop: ")
+version = input("Versión de la aplicación: ")
+nombre_app = input("Nombre de la aplicación: ")
+comentario_app = input("Comentario de la aplicación: ")
+ejecutable = input("Ruta al ejecutable: ")
+icono = input("Ruta al icono de la app: ")
+terminal = input("¿Se ejecutará en el terminal? (True para sí, False para no): ")
+tipo_app = input("Tipo de aplicación (pon Application si tienes dudas): ")
+categorias = input("Categorías en las que entra esta aplicación: ")
+carpeta = input("Carpeta en donde está el ejecutable: ")
+
+def crearDesktop():
+    nota = open(nombre_archivo + ".desktop", "w")
+    texto_entrada = ('[Desktop Entry]')
+    texto_version = ('\nVersion=' + version)
+    texto_nombreAplicacion = ('\nName=' + nombre_app)
+    texto_comentario = ('\nComment=' + comentario_app)
+    texto_ejecutable = ('\nExec=' + ejecutable)
+    texto_icono = ('\nIcon=' + icono)
+    texto_terminal = ('\nTerminal=' + terminal)
+    texto_tipoapp = ('\nType=' + tipo_app)
+    texto_categorias = ('\nCategories=' + categorias)
+    texto_startupNotifyApp = ('\nStartupNotify=false')
+    texto_ruta = ('\nPath=' + carpeta)
+    texto = (texto_entrada + texto_version + texto_nombreAplicacion 
+             + texto_comentario + texto_ejecutable + texto_icono 
+             + texto_terminal + texto_tipoapp + texto_categorias 
+             + texto_startupNotifyApp + texto_ruta)
+    nota.write(texto)
+    nota.close()
+    nombreApp = nombre_app + ".desktop"
+    os.system('chmod +x ' + nombreApp + '\nmv ' + nombreApp + ' ~/.local/share/applications')
+    print("Archivo .desktop creado con éxito. Está en ~/.local/share/applications/ y debería aparecer también en el cajón de apps.")
+        
+crearDesktop()
