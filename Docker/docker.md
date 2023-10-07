@@ -101,6 +101,9 @@ docker run --rm image_name
 
 # Delete all containers with "Closed" state
 sudo docker rm $(sudo docker ps -a -f status=exited -q)
+
+# Delete unused images
+docker image prune -a
 ```
 ### Stop and start containers
 ```
