@@ -105,6 +105,7 @@ ffmpeg -i input.mkv -codec copy output.mp4
 
 ```sh
 ffmpeg -i archivo.mp4 -s 0 -t 600 first-10-min.mp4
+ffmpeg -i epica.mp4 -ss 1:01:30 -to 1:06:00 rivers.mp4
 
 ```
 
