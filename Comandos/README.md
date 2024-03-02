@@ -109,6 +109,11 @@ ffmpeg -i epica.mp4 -ss 1:01:30 -to 1:06:00 rivers.mp4
 
 ```
 
+## Reducir tamaño a video
+```
+ffmpeg -i rivers.mp4 -vcodec libx265 -crf 28 rivers2.mp4
+```
+
 ## Muestra los archivos duplicados
 
 ```sh
