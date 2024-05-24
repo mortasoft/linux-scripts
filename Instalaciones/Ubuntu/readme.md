@@ -46,6 +46,19 @@ echo "deb [arch=amd64] http://download.virtualbox.org/virtualbox/debian $(lsb_re
 sudo apt install -y linux-headers-$(uname -r) dkms
 sudo apt install virtualbox-7.0 -y
 
+# Virtualbox Ubuntu 24.04 LTS
+wget -O- https://www.virtualbox.org/download/oracle_vbox_2016.asc | sudo gpg --dearmor --yes --output /usr/share/keyrings/oracle-virtualbox-2016.gpg
+echo "deb [arch=amd64 signed-by=/usr/share/keyrings/oracle-virtualbox-2016.gpg] http://download.virtualbox.org/virtualbox/debian $(. /etc/os-release && echo "$VERSION_CODENAME") contrib" | sudo tee /etc/apt/sources.list.d/virtualbox.list
+sudo apt update
+sudo apt install virtualbox-7.0
+vboxmanage -v | cut -dr -f1
+wget https://download.virtualbox.org/virtualbox/7.0.18/Oracle_VM_VirtualBox_Extension_Pack-7.0.18.vbox-extpack
+sudo vboxmanage extpack install Oracle_VM_VirtualBox_Extension_Pack-7.0.18.vbox-extpack
+sudo usermod -aG vboxusers $USER
+
+
+# Utils
+
 sudo apt install httrack webhttrack
 sudo apt install hashcat-nvidia
 
