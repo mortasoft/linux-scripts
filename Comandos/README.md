@@ -19,6 +19,12 @@ Scripts Útiles para el uso personal
 lsblk
 ```
 
+## Descomprimir RAR
+
+```sh
+unrar x -pMIPASSWORD './*.rar'
+```
+
 ## Grabar la pantalla desde la terminal
 
 ```sh
