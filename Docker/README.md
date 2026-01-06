@@ -221,4 +221,35 @@ exit
 # In the host make a commit of the KaliContainer
 docker commit kali-con my-kali
 ```
+
+# Backup Volumes
+```
+#!/bin/bash -x
+# Directorio de destino para el respaldo
+BACKUP_DIR=/home/ubuntu/backups
+
+# Nombre del archivo de respaldo
+BACKUP_FILE=docker-volumes-$(date +%Y-%m-%d).tar.gz
+
+# Obtener una lista de todos los volúmenes de Docker
+VOLUMES=$(docker volume ls -q)
+
+#cd $BACKUP_DIR
+
+# Crear el directorio de respaldo si no existe
+mkdir -p $BACKUP_DIR
+
+# Respaldar cada volumen de Docker en un archivo separado
+for VOLUME in $VOLUMES
+do
+  echo $VOLUME
+  docker run --rm -v $VOLUME:/data -v $BACKUP_DIR:/backup alpine tar czf /backup/$VOLUME.tar.gz -C /data .
+done
+
+# Combinar todos los archivos de respaldo en un solo archivo comprimido
+tar czf $BACKUP_DIR/$BACKUP_FILE --ignore-failed-read -C $BACKUP_DIR .
+
+# Eliminar los archivos de respaldo individuales
+rm $BACKUP_DIR/*.tar.gz 
+```
 ```
