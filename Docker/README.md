@@ -62,6 +62,12 @@ sudo apt install -y docker-ce docker-ce-cli containerd.io
 
 ## Basic commands
 
+
+### Docker Process
+```
+while true; do clear;docker ps -a; sleep 2; done
+```
+
 ### Start docker instance
 ```
 systemctl start docker
